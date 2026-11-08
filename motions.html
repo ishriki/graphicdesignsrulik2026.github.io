@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Animated studies in movement, scale, and timing.">
+<title>Motions | Graphic Design Srulik&#x27;s Portfolio</title>
+<link rel="icon" href="assets/home/srulik-mark.webp">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/projects.css">
+<style>
+  #queen-motion-frame {
+    background: #151515;
+  }
+  #queen-motion-frame video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+  .queen-motion-enlarge {
+    display: inline-flex;
+    margin-top: 0.75rem;
+  }
+  #queen-motion-dialog {
+    box-sizing: border-box;
+    width: min(72rem, calc(100% - 2rem));
+    max-width: none;
+    max-height: calc(100% - 2rem);
+    padding: 0.75rem;
+    border: 0;
+    border-radius: 0.75rem;
+    background: #151515;
+    color: white;
+  }
+  #queen-motion-dialog::backdrop {
+    background: rgb(0 0 0 / 75%);
+  }
+  .queen-motion-dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  #queen-motion-dialog video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+    max-height: 75dvh;
+    object-fit: contain;
+  }
+</style>
+</head>
+<body id="top" class="case-page tone-rose">
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html" aria-label="Srulik Shriki, home"><img src="assets/home/srulik-mark.webp" width="37" height="37" alt=""><span>Srulik Shriki</span></a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#work">Work</a><a href="index.html#about">About</a><a class="contact-nav" href="mailto:ishriki@emich.edu">Contact</a>
+      </nav>
+    </div>
+  </header>
+<main id="main" tabindex="-1">
+<section class="case-hero" aria-label="Project introduction">
+  <div class="wrap case-hero-inner">
+    <div class="page-head"><a class="back" href="projects.html">← All projects</a><p class="eyebrow">Motion graphics</p><h1><span>Motions</span></h1><p class="lead">Animated studies in movement, scale, and timing.</p></div>
+    <div class="case-art portrait-art"><img src="assets/gallery/motion-queen-lady.jpg" alt="Queen Lady motion study" fetchpriority="high"></div>
+  </div>
+</section>
+<div class="wrap case-content">
+<section class="section"><h2>Selected work</h2><!-- Add future examples inside this grid. --><div class="grid two"><figure class="piece" data-category="motion">
+<div class="media"><video controls playsinline preload="none" poster="assets/gallery/train_motion.jpg" aria-label="Amtrak motion study"><source src="assets/gallery/train_motion.mp4" type="video/mp4"><a href="assets/gallery/train_motion.mp4">Open the video</a></video></div>
+<figcaption><strong>Amtrak motion study</strong>Illustrator artwork animated in Photoshop to explore scale, sound, and movement.</figcaption></figure><figure class="piece" data-category="motion">
+<div class="media" id="queen-motion-frame"><video controls playsinline preload="none" poster="assets/gallery/motion-queen-lady.jpg" aria-label="Motion Queen Lady"><source src="assets/gallery/motion-queen-lady.mp4" type="video/mp4"><a href="assets/gallery/motion-queen-lady.mp4">Open the video</a></video></div>
+<figcaption><strong>Motion Queen Lady</strong>I drew the vector artwork in Adobe Illustrator and animated it frame by frame in Adobe Photoshop.
+<div><a class="button queen-motion-enlarge" id="queen-motion-enlarge" href="assets/gallery/motion-queen-lady.mp4" target="_blank" rel="noopener" aria-label="Enlarge Motion Queen Lady">Enlarge video ↗</a></div>
+</figcaption></figure><figure class="piece" data-category="motion">
+<div class="media"><video controls playsinline preload="none" poster="assets/gallery/dancing-man.jpg" aria-label="Dancing Man"><source src="assets/gallery/dancing-man.mp4" type="video/mp4"><a href="assets/gallery/dancing-man.mp4">Open the video</a></video></div>
+<figcaption><strong>Dancing Man</strong>I drew the vectors in Adobe Illustrator and animated them with the Adobe Photoshop timeline.</figcaption></figure></div></section><section class="section"><h2>Motion work for an edtech startup</h2><p class="intro">I created short character-led videos for an early-stage edtech company to explain its product and share ideas about the sector. I built avatars in Adobe Express, generated narration with Speechma, and combined the visuals and audio in Adobe Photoshop. The videos are confidential.</p></section><div class="actions"><a class="button" href="web-design.html">Next project →</a></div>
+</div>
+</main>
+<dialog id="queen-motion-dialog" aria-labelledby="queen-motion-title">
+  <div class="queen-motion-dialog-header">
+    <strong id="queen-motion-title">Motion Queen Lady</strong>
+    <form method="dialog"><button class="button" type="submit" autofocus>Close</button></form>
+  </div>
+</dialog>
+<footer class="footer"><div class="wrap"><span>Srulik Shriki · Graphic Design &amp; Communication</span><nav aria-label="Footer"><a href="projects.html">Project index</a><a href="gallery.html">Gallery</a><a href="https://www.linkedin.com/in/srulik-shriki-858525204/">LinkedIn</a><a href="https://canva.link/yx0ch3mzbwve8dt">Résumé</a><a href="#top">Back to top ↑</a></nav></div></footer>
+
+<script>
+  const queenFrame = document.getElementById('queen-motion-frame');
+  const queenVideo = queenFrame.querySelector('video');
+  const queenEnlarge = document.getElementById('queen-motion-enlarge');
+  const queenDialog = document.getElementById('queen-motion-dialog');
+
+  if (typeof queenDialog.showModal === 'function') {
+    queenEnlarge.setAttribute('aria-haspopup', 'dialog');
+    queenEnlarge.addEventListener('click', (event) => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      queenDialog.append(queenVideo);
+      queenDialog.showModal();
+    });
+    queenDialog.addEventListener('close', () => {
+      queenFrame.append(queenVideo);
+    });
+  }
+</script>
+</body>
+</html>
